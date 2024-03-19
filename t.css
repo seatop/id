@@ -1,0 +1,5 @@
+* { margin: 0;padding: 0; }
+. { margin: 0;padding: 0; }
+body {background-color: #000;}
+#theid {text-align: center;}
+.schar {display: inline-block; width: 20px;height: 20px;color: #678;font-size: 16px;}
