@@ -34,8 +34,14 @@ function C(){
 T();
 
 window.onresize=function(){
-
 	T();
-
 }
-setInterval("C()",50);
+
+let gd = setInterval("C()",50);
+document.onclick = function(){
+	if(gd){
+		gd = clearInterval(gd);
+	}else{
+		gd = setInterval("C()",50);
+	}
+}
