@@ -31,6 +31,22 @@ function C(){
 	
 }
 
+function tip(){
+	let dc = document.createElement('div');
+	let t = document.createTextNode('TheID.CN');
+	dc.appendChild(t);
+	document.body.appendChild(dc);
+	dc.style.color = "#fff663";
+	dc.style.width = "160px";	
+	dc.style.backgroundColor="#000";
+	dc.style.position = "fixed";
+	dc.style.left = window.innerWidth/2 - 80 +"px";
+	dc.style.top = window.innerHeight/2 - 20 +"px";
+	dc.style.textAlign = "center";
+	dc.style.padding ="10px";
+	dc.style.letterSpacing = "5px";
+}
+
 T();
 
 window.onresize=function(){
@@ -41,7 +57,10 @@ let gd = setInterval("C()",50);
 document.onclick = function(){
 	if(gd){
 		gd = clearInterval(gd);
+		tip();
 	}else{
 		gd = setInterval("C()",50);
+		let list = document.getElementsByTagName('div');
+		document.body.removeChild(list[1]);
 	}
 }
