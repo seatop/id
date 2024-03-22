@@ -27,7 +27,12 @@ function C(){
     	document.getElementById("s_"+i+"_"+j).innerText = document.getElementById("s_"+ii+"_"+j).innerText;
     }
     
-	document.getElementById("s_0_"+j).innerText = rchar();		
+	document.getElementById("s_0_"+j).innerText = rchar();
+	if(document.getElementById("s_0_0").innerText =="T"){
+		document.getElementById("s_0_0").innerText = rchar();
+		gd = clearInterval(gd);
+		tip();
+	}
 	
 }
 
