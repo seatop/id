@@ -54,8 +54,13 @@ function tip(){
 
 T();
 
-window.onresize=function(){
+window.onresize=function(){	
 	T();
+	let list = document.getElementsByTagName('div');
+	if(list[1]){		
+		list[1].style.left = window.innerWidth/2 - 80 +"px";
+		list[1].style.top = window.innerHeight/2 - 20 +"px";
+	}	
 }
 
 let gd = setInterval("C()",50);
